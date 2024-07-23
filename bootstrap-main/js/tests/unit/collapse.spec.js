@@ -984,6 +984,50 @@ describe('Collapse', () => {
         jQueryMock.fn.collapse.call(jQueryMock, action)
       }).toThrowError(TypeError, `No method named "${action}"`)
     })
+
+    it('should return true on show', () => {
+      fixtureEl.innerHTML = '<div></div>'
+
+      const div = fixtureEl.querySelector('div')
+      const config = 'show'
+
+      jQueryMock.fn.collapse = Collapse.jQueryInterface
+      jQueryMock.elements = [div]
+
+      expect(() => {
+        jQueryMock.fn.collapse.call(jQueryMock, action)
+      }).toThrowError(TypeError, `No method named "${action}"`)
+    })
+
+    it('should return false on config', () => {
+      fixtureEl.innerHTML = '<div></div>'
+
+      const div = fixtureEl.querySelector('div')
+      const config = 42
+
+      jQueryMock.fn.collapse = Collapse.jQueryInterface
+      jQueryMock.elements = [div]
+
+      expect(() => {
+        jQueryMock.fn.collapse.call(jQueryMock, action)
+      }).toThrowError(TypeError, `No method named "${action}"`)
+    })
+
+    it('should return false on config', () => {
+      fixtureEl.innerHTML = '<div></div>'
+
+      const div = fixtureEl.querySelector('div')
+      const config = 'exemplo'
+
+      jQueryMock.fn.collapse = Collapse.jQueryInterface
+      jQueryMock.elements = [div]
+
+      expect(() => {
+        jQueryMock.fn.collapse.call(jQueryMock, action)
+      }).toThrowError(TypeError, `No method named "${action}"`)
+    })
+
+
   })
 
   describe('getInstance', () => {
