@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Scrollbar</title>
+    <style>
+        .scroll-container {
+            width: 300px;
+            height: 200px;
+            overflow: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .scroll-content {
+            width: 600px;
+            /* Maior que o container para demonstrar a barra de rolagem horizontal */
+            height: 400px;
+            /* Maior que o container para demonstrar a barra de rolagem vertical */
+            background-color: #f9f9f9;
+        }
+
+        /* Estilizando a scrollbar (para navegadores que suportam) */
+        .scroll-container::-webkit-scrollbar {
+            width: 12px;
+            /* Largura da scrollbar */
+            height: 12px;
+            /* Altura da scrollbar horizontal */
+        }
+
+        .scroll-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            /* Cor do fundo da scrollbar */
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb {
+            background-color: #888;
+            /* Cor da "bolinha" da scrollbar */
+            border-radius: 10px;
+            /* Cantos arredondados */
+            border: 3px solid #f1f1f1;
+            /* Espaçamento interno da scrollbar */
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+            /* Cor ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scroll-container">
+        <div class="scroll-content">
+            <p>Este é um exemplo de conteúdo dentro de um contêiner que possui uma barra de rolagem. O conteúdo é maior
+                que o contêiner, por isso as barras de rolagem são exibidas.</p>
+            <p>Adicione mais conteúdo aqui para ver a barra de rolagem em ação.</p>
+            <p>Você pode rolar para ver mais conteúdo.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
